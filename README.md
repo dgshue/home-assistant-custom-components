@@ -20,7 +20,7 @@ This component is written to toggle pfSense firewall rules on (enabled) or off (
 
 ### Installation
 
-- Copy directory `toon` to your `<config dir>/custom_components` directory.
+- Copy directory `pfsense_rule` to your `<config dir>/custom_components` directory.
 - Configure with config below.
 - Restart Home-Assistant.
 

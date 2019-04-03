@@ -74,7 +74,7 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
         # Get the current set of filters
         filters = FauxapiLib.config_get('filter')
 
-        _LOGGER.debug("Found %s rules in pfSense", len(filters))
+        _LOGGER.debug("Found %s rules in pfSense", len(filters['rule']))
 
         if rule_prefix:
             _LOGGER.debug("Filter for rules starting with %s being applied", rule_prefix)
@@ -87,17 +87,18 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
                 if (rule['descr'].startswith(rule_prefix)):
                     _LOGGER.debug("Found rule %s", rule['descr'])
                     new_rule = pfSense('pfsense_'+rule['descr'],rule['descr'],rule['tracker'], host, api_key, access_token)
+                    rules.append(new_rule)
             else:
                 _LOGGER.debug("Found rule %s", rule['descr'])
                 new_rule = pfSense('pfsense_'+rule['descr'],rule['descr'],rule['tracker'], host, api_key, access_token)
-            rules.append(new_rule)
+                rules.append(new_rule)
             i=i+1
 
 
         # Add devices
         add_entities(rules)
-    except:
-        _LOGGER.error("Problem getting rule set from pfSense host: %s.  Likely due to API key or secret.", host)
+    except Exception as e:
+        _LOGGER.error("Problem getting rule set from pfSense host: %s.  Likely due to API key or secret. More Info:" + str(e), host)
 
 class pfSense(SwitchDevice):
     """Representation of an pfSense Rule."""

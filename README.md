@@ -11,7 +11,7 @@ Component Overview
 
 This component is written to toggle pfSense firewall rules on (enabled) or off (disabled).  One my question why in the world would someone want to do this from HA. Simply put, I have children that from time to time refuse to clean their rooms and require further motivation on the fly vs on a strict schedule.  However, I'm sure someone else might find a better use case other than messy kids.
 
-### Pre-Requs
+### Pre-Reqs
 
 - pfSense 2.3.x or 2.4.x
 - FauxAPI 1.3+ installed

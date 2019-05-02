@@ -1,0 +1,8 @@
+{
+"domain": "pfsense_rule",
+"name": "pfsense_rule switch",
+"documentation": "https://github.com/dgshue/home-assistant-custom-components",
+"dependencies": [],
+"codeowners": [],
+"requirements": []
+}

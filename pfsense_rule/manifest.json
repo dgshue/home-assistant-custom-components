@@ -4,5 +4,5 @@
 "documentation": "https://github.com/dgshue/home-assistant-custom-components",
 "dependencies": [],
 "codeowners": [],
-"requirements": []
+"requirements": ["pfsense-fauxapi==20190317.1"]
 }

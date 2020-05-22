@@ -29,7 +29,7 @@ import voluptuous as vol
 import homeassistant.helpers.config_validation as cv
 
 from homeassistant.components.switch import (
-    SwitchDevice, PLATFORM_SCHEMA, ENTITY_ID_FORMAT)
+    SwitchEntity, PLATFORM_SCHEMA, ENTITY_ID_FORMAT)
 from homeassistant.const import (
     CONF_FRIENDLY_NAME, CONF_SWITCHES, CONF_VALUE_TEMPLATE, CONF_HOST, CONF_API_KEY, CONF_ACCESS_TOKEN)
 
@@ -100,7 +100,7 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
     except Exception as e:
         _LOGGER.error("Problem getting rule set from pfSense host: %s.  Likely due to API key or secret. More Info:" + str(e), host)
 
-class pfSense(SwitchDevice):
+class pfSense(SwitchEntity):
     """Representation of an pfSense Rule."""
 
     def __init__(self, name, rule_name, tracker_id, host, api_key, access_token):

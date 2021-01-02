@@ -2,7 +2,7 @@
 Switch Platform support for pfSense firewall rules.
 
 For more details please refer to
-https://github.com/e2m32/home-assistant-custom-components
+https://github.com/dgshue/home-assistant-custom-components
 
 Example usage:
 

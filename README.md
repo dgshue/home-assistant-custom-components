@@ -43,4 +43,4 @@ Configuration variables:
 - **host** (*Required*): The hostname or IP address of the pfSense firewall, ideally the LAN IP
 - **api_key** (*Required*): The API Key from FauxAPI
 - **access_token** (*Required*): The API Secret from FauxAPI
-- **rule_filter** (*Optional*): Used to create switches only on certain rules.  Rule name must start with filter to match (ie. HomeAssisant-BlockTraffic1)
+- **rule_filter** (*Optional*): Used to create switches only on certain rules.  Rule description must start with filter to match (ie. HomeAssisant-BlockTraffic1)
